@@ -1,21 +1,47 @@
 //victoria 
 //checkpoint 2
 
+int counter;
+
 void setup() {
   size(800, 600);
+  counter = 0;
 }
 
 void draw() {
   background(255);
-  spirit(300, 200);
+  counter = counter + 1;
+  
+  if (counter < 10) {
+    fill(0);
+    sleepdemon(300, 200);
+  }
+  if (counter > 10) {
+    //fill(255);
+    //sleepdemon(300, 200);
+  }
+  if (counter == 20); {
+  counter = 0;
+  }
+  
 }
 
 //          Parameters 
-void spirit(int x, int y) {
+void sleepdemon(int x, int y) {
   translate(x,y);
   strokeWeight(0); 
   
+//body + legs
+  fill(0);
+  strokeWeight(4);
+  line(-5, 10, -200, 100);
+  line(-200, 100, -350, 500);
+  line(-150, 80, -200, 500);
+  line(-100, 55, -100, 500);
+  line(-40, 30, 0, 500);
+  
 //head
+  strokeWeight(0);
   fill(0);
   ellipse(0, 0, 75, 75);
   fill(255);
@@ -23,6 +49,7 @@ void spirit(int x, int y) {
   ellipse(-10, 0, 5, 7);
   
 //teeth
+  strokeWeight(0);
   fill(255);
   ellipse(-23, 5, 3, 6);
   ellipse(23, 5, 3, 6);
@@ -67,12 +94,6 @@ void spirit(int x, int y) {
   ellipse(-16, 10, 4, 8);
   ellipse(-17, 10, 4, 8);
   ellipse(-18, 10, 4, 8);
-  
-  
-//legs
+
 
 }
-
-
-
-  
