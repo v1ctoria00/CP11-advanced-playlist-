@@ -1,28 +1,36 @@
 //victoria 
 //checkpoint 2
 
-int counter;
+//int counter;
+int x;
+int y;
 
 void setup() {
   size(800, 600);
-  counter = 0;
+  x = 0;
+  y = 300;
+//  counter = 0;
 }
 
 void draw() {
   background(255);
-  counter = counter + 1;
+  sleepdemon(x, y);
+  x = x + 5;
+  if (x > 900) {
+    x = -100;
+//  counter = counter + 1;
   
-  if (counter < 10) {
-    fill(0);
-    sleepdemon(300, 200);
-  }
-  if (counter > 10) {
+//  if (counter < 10) {
+//    fill(0);
+//    sleepdemon(300, 200);
+//  }
+//  if (counter > 10) {
     //fill(255);
     //sleepdemon(300, 200);
-  }
-  if (counter == 20); {
-  counter = 0;
-  }
+//  }
+//  if (counter == 20); {
+//  counter = 0;
+   }
   
 }
 
